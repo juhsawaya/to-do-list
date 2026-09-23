@@ -2,7 +2,7 @@
 
 Capturas reais do aplicativo em emulador Android API 35, geradas por teste instrumentado com MainActivity e Room.
 
-[Execução dos testes](https://github.com/juhsawaya/to-do-list/actions/runs/35801711422) · Código testado: `45bcae6e52995a2d2dc652d12a7886e76187fdd3`.
+[Execução dos testes](https://github.com/juhsawaya/to-do-list/actions/runs/35802113756) · Código testado: `2ec5fd7f5da50600b34626f78fd60c498d38e3ec`.
 
 O teste também recria a Activity e verifica a persistência do resultado.
 
