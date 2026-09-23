@@ -45,8 +45,7 @@ jobs:
           disable-animations: true
           script: |
             bash ./gradlew connectedDebugAndroidTest --stacktrace
-            mkdir -p docs/images/exclusao
-            adb pull /sdcard/Android/data/carreiras.com.github.todolist/files/evidencias/. docs/images/exclusao/
+            bash scripts/capturar_emulador.sh
       - name: Preparar documento de evidências
         run: python3 scripts/registrar_evidencias.py
       - name: Publicar evidências verificadas
