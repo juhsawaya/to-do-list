@@ -73,6 +73,10 @@ class EvidenciasExclusaoTest {
         compose.waitForIdle()
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         instrumentation.waitForIdleSync()
+        // A árvore semântica pode estar atualizada antes do frame chegar ao compositor
+        // do Android. Aguarda a apresentação visual antes da captura de tela inteira.
+        android.os.SystemClock.sleep(750)
+        instrumentation.uiAutomation.syncInputTransactions()
         val pasta = File(instrumentation.targetContext.getExternalFilesDir(null), "evidencias")
         check(pasta.exists() || pasta.mkdirs())
         val screenshot = requireNotNull(instrumentation.uiAutomation.takeScreenshot())
