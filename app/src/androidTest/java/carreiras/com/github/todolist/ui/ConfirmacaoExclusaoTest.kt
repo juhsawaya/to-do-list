@@ -18,8 +18,8 @@ class ConfirmacaoExclusaoTest {
     @Test
     fun cancelarPreservaListaEConfirmarExcluiSomenteSelecionada() {
         val tarefas = mutableStateListOf(
-            Tarefa(id = 1, titulo = "Estudar Room"),
-            Tarefa(id = 2, titulo = "Enviar atividade")
+            Tarefa(id = 1, titulo = "Estudar Room", descricao = ""),
+            Tarefa(id = 2, titulo = "Enviar atividade", descricao = "")
         )
         val idsExcluidos = mutableListOf<Int>()
         compose.setContent {

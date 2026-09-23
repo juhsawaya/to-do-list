@@ -283,14 +283,14 @@ fun ConfirmacaoExclusaoDialog(
 private fun ConfirmacaoExclusaoPreview() {
     MaterialTheme {
         ListaTarefasContent(
-            tarefas = listOf(Tarefa(id = 1, titulo = "Estudar Room")),
+            tarefas = listOf(Tarefa(id = 1, titulo = "Estudar Room", descricao = "")),
             onNovaTarefa = {},
             onEditarTarefa = {},
             onCheckedChange = { _, _ -> },
             onDeletar = {}
         )
         ConfirmacaoExclusaoDialog(
-            tarefa = Tarefa(id = 1, titulo = "Estudar Room"),
+            tarefa = Tarefa(id = 1, titulo = "Estudar Room", descricao = ""),
             onCancelar = {},
             onConfirmar = {}
         )
