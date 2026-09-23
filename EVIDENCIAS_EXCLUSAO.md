@@ -1,32 +1,37 @@
 # Evidências — confirmação de exclusão
 
-**PENDENTE: capturas reais do emulador.** Este arquivo é um roteiro; não representa testes executados. Os links abaixo serão exibidos quando as imagens forem adicionadas.
+Capturas reais do aplicativo em emulador Android API 35, geradas por teste instrumentado com MainActivity e Room.
 
-Cadastre “Estudar Room” e “Enviar atividade”. Use a lixeira da primeira tarefa nos passos abaixo.
+[Execução dos testes](https://github.com/juhsawaya/to-do-list/actions/runs/35801711422) · Código testado: `45bcae6e52995a2d2dc652d12a7886e76187fdd3`.
+
+O teste também recria a Activity e verifica a persistência do resultado.
 
 ## 1. Lista antes da exclusão
-Capture as duas tarefas na lista.
+
+Três tarefas, incluindo uma atrasada, uma com prazo futuro e uma sem prazo.
 
 ![Lista antes da exclusão](docs/images/exclusao/01-lista-antes.png)
 
 ## 2. Diálogo aberto
-Toque na lixeira de “Estudar Room”. Verifique o título da tarefa e os botões Cancelar e Excluir.
 
-![Primeira abertura](docs/images/exclusao/02-dialogo.png)
+Confirmação sobre a lista com o título Estudar Room e as ações Cancelar e Excluir.
+
+![Diálogo aberto](docs/images/exclusao/02-dialogo.png)
 
 ## 3. Resultado ao cancelar
-Toque em Cancelar. As duas tarefas devem continuar na lista.
 
-![Cancelamento](docs/images/exclusao/03-cancelar.png)
+O diálogo foi fechado e as três tarefas foram preservadas, inclusive no Room.
+
+![Resultado ao cancelar](docs/images/exclusao/03-cancelar.png)
 
 ## 4. Nova abertura
-Toque novamente na lixeira de “Estudar Room”.
+
+A lixeira da mesma tarefa foi acionada novamente.
 
 ![Nova abertura](docs/images/exclusao/04-dialogo-novamente.png)
 
 ## 5. Resultado após confirmar
-Toque em Excluir. Apenas “Enviar atividade” deve permanecer.
 
-![Exclusão confirmada](docs/images/exclusao/05-excluir.png)
+Somente Estudar Room foi removida. Enviar atividade e Comprar caderno permaneceram no Room.
 
-Após capturar e conferir os cinco resultados, substitua o aviso de pendência por uma descrição da execução e faça commit das imagens e deste arquivo.
+![Resultado após confirmar](docs/images/exclusao/05-excluir.png)
